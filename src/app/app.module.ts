@@ -1,16 +1,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
-// Angular Material 2 Modules.
+/*
+Angular Material 2
+*/
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+import { MatDatepickerModule, MatButtonModule, MatCheckboxModule, MatNativeDateModule } from '@angular/material';
+
+/*
+ Services
+*/
+import { DateServiceService } from './services/date-service.service';
 
 import { AppComponent } from './app.component';
+import { DatepickerComponent } from './components/datepicker/datepicker.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DatepickerComponent
   ],
   imports: [
     BrowserModule,
@@ -18,8 +28,13 @@ import { AppComponent } from './app.component';
     NoopAnimationsModule,
     MatButtonModule,
     MatCheckboxModule,
+    MatNativeDateModule,
+    MatDatepickerModule,
   ],
-  providers: [],
+  providers: [
+    DateServiceService,
+    FormsModule,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
