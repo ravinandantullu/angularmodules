@@ -14,6 +14,9 @@ import { MatDatepickerModule, MatButtonModule, MatCheckboxModule, MatNativeDateM
 */
 import { DateService } from './services/date-service.service';
 
+/*
+ Components
+*/
 import { AppComponent } from './app.component';
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
 
