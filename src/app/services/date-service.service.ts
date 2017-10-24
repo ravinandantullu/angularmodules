@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class DateServiceService {
+export class DateService {
   fromDate = new Date();
   toDate = new Date();
 

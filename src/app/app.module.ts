@@ -12,7 +12,7 @@ import { MatDatepickerModule, MatButtonModule, MatCheckboxModule, MatNativeDateM
 /*
  Services
 */
-import { DateServiceService } from './services/date-service.service';
+import { DateService } from './services/date-service.service';
 
 import { AppComponent } from './app.component';
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
@@ -30,10 +30,10 @@ import { DatepickerComponent } from './components/datepicker/datepicker.componen
     MatCheckboxModule,
     MatNativeDateModule,
     MatDatepickerModule,
+    FormsModule,
   ],
   providers: [
-    DateServiceService,
-    FormsModule,
+    DateService,
   ],
   bootstrap: [AppComponent]
 })

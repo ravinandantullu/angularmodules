@@ -10,16 +10,11 @@
     </div>
     <div class="datepicker-fromdate">
       <mat-form-field>
-        <input matInput [matDatepicker]="picker" placeholder="Choose a date">
-        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
-        <mat-datepicker #picker></mat-datepicker>
-      </mat-form-field>
-      <!-- <md-input-container>
-        <input mdInput [max]="maxFromDate" [mdDatepicker]="frompicker" placeholder="Choose a from date" [ngModel]="fromDateTime"
+        <input matInput [max]="maxFromDate" [matDatepicker]="frompicker" placeholder="Choose from date" [ngModel]="fromDateTime"
           (ngModelChange)="onChangeFromDate($event)" readonly>
-        <button mdSuffix [mdDatepickerToggle]="frompicker"></button>
-      </md-input-container>
-      <md-datepicker #frompicker></md-datepicker> -->
+        <mat-datepicker-toggle matSuffix [for]="frompicker"></mat-datepicker-toggle>
+        <mat-datepicker #frompicker></mat-datepicker>
+      </mat-form-field>
     </div>
     <div>
       <h2>
@@ -27,6 +22,12 @@
       </h2>
     </div>
     <div class="datepicker-todate">
+      <mat-form-field>
+        <input matInput [min]="maxToDate" [matDatepicker]="topicker" placeholder="Choose To date" [ngModel]="toDateTime" (ngModelChange)="onChangeToDate($event)"
+          readonly>
+        <mat-datepicker-toggle matSuffix [for]="topicker"></mat-datepicker-toggle>
+        <mat-datepicker #topicker></mat-datepicker>
+      </mat-form-field>
       <!-- <md-input-container>
         <input mdInput [min]="minToDate" [max]="maxToDate" [mdDatepicker]="topicker" placeholder="Choose a to  date" [ngModel]="toDateTime"
           (ngModelChange)="onChangeToDate($event)" readonly>
