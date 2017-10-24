@@ -9,7 +9,7 @@ import * as moment from 'moment';
 export class DatepickerComponent implements OnInit {
   @Input() public dateFromOnChange: any;
   @Input() public dateToOnChange: any;
-  @Input() public fromDateTime = new Date(moment().subtract(7, 'd').format('MMM YYYY DD'));;
+  @Input() public fromDateTime = new Date(moment().subtract(7, 'd').format('MMM YYYY DD'));
   @Input() public toDateTime = new Date(moment().subtract(1, 'd').format('MMM YYYY DD'));
   public minToDate = new Date(this.fromDateTime);
   public maxToDate = new Date();
